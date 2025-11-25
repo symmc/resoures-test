@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: flask-dev
+  namespace: dev
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: app-dev.mine.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: flask-dev
+                port:
+                  number: 80
