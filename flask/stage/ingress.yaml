@@ -2,14 +2,16 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: flask-dev
+    annotations:
+      nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   ingressClassName: nginx
   rules:
-    - host: app-dev.mine.com
+    - host: app.mine.com
       http:
         paths:
-          - path: /
-            pathType: Prefix
+          - path: /test/v.*
+            pathType: ImplementationSpecific
             backend:
               service:
                 name: flask-dev
