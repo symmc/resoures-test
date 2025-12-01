@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: flask-dev
-          image: docker.io/seymaca/myapp-py:2
+          image: docker.io/seymaca/myapp-py:23
           ports:
             - containerPort: 80
