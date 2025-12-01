@@ -10,8 +10,8 @@ spec:
     - host: app-dev.mine.com
       http:
         paths:
-          - path: /
-            pathType: Prefix
+          - path: /api/v.*
+            pathType: ImplementationSpecific
             backend:
               service:
                 name: flask-dev
