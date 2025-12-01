@@ -4,7 +4,7 @@ metadata:
   name: flask-dev
   annotations:
     nginx.ingress.kubernetes.io/use-regex: "true"
-    nginx.ingress.kubernetes.io/whitelist-source-range: "212.252.37.18/32"
+    nginx.ingress.kubernetes.io/whitelist-source-range: "212.252.37.18/32, 192.168.1.0/24"
 spec:
   ingressClassName: nginx
   rules:
