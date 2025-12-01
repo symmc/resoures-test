@@ -11,7 +11,7 @@ spec:
       http:
         paths:
           - path: /test/v.*
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: flask-dev
